@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "description": "Baku Project",
   "main": "index.js",
+  "author": "Engin Polat",
   "license": "ISC",
 }
