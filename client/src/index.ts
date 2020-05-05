@@ -31,6 +31,8 @@ connection.on('open', (id) => {
 });
 
 connection.on('call', call => {
+  answerButton.classList.remove('d-none');
+
   getUserMedia({video: true, audio: true}, streamLocal => {
     videoMe.srcObject = streamLocal;
 });
