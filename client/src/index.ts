@@ -77,6 +77,14 @@ registerButton.addEventListener('click', () => {
 
     registerForm.classList.add('d-none');
     contentForm.classList.remove('d-none');
+
+    let attendeeList: any[];
+    response.json().then(_ => {
+      attendeeList = _;
+
+      fillAttendeesList(attendeeList);
+    });
+
   });
 });
 });
