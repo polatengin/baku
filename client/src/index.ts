@@ -29,6 +29,10 @@ connection.on('open', (id) => {
   connectionAlertSuccess.classList.remove('d-none');
   registerButton.classList.remove('disabled');
 });
+
+connection.on('call', call => {
+});
+
 connection.on('error', (err) => {
   const connectionAlertFail = document.getElementById('connection-alert-fail');
   connectionAlertFail.classList.remove('d-none');
