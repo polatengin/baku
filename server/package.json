@@ -4,5 +4,9 @@
   "description": "Baku Project",
   "main": "index.js",
   "author": "Engin Polat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polatengin/baku"
+  },
   "license": "ISC",
 }
