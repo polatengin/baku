@@ -11,3 +11,5 @@ if (getUserMedia === null) {
 
   mediaAlertFail.classList.remove('d-none');
 }
+
+const connection = new Peer({ secure: API_SECURE, host: API_HOST, port: API_PORT });
