@@ -123,6 +123,7 @@ registerButton.addEventListener('click', () => {
 function fillAttendeesList(attendees: any[]) {
   const attendeeList = document.getElementById('attendee-list');
   attendeeList.innerHTML = '';
+  const list = attendees.filter(item => (item.email as string).indexOf(searchText) > -1 || (item.connection_id as string).indexOf(searchText) > -1);
 }
 function makeCall(id: string) {
 }
