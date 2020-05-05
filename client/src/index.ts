@@ -120,3 +120,5 @@ registerButton.addEventListener('click', () => {
 });
 });
 
+function fillAttendeesList(attendees: any[]) {
+}
