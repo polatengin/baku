@@ -121,6 +121,8 @@ registerButton.addEventListener('click', () => {
 });
 
 function fillAttendeesList(attendees: any[]) {
+  const attendeeList = document.getElementById('attendee-list');
+  attendeeList.innerHTML = '';
 }
 function makeCall(id: string) {
 }
