@@ -57,3 +57,7 @@ connection.on('error', (err) => {
     location.reload();
   });
 });
+
+registerButton.addEventListener('click', () => {
+});
+
