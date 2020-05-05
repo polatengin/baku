@@ -123,7 +123,28 @@ registerButton.addEventListener('click', () => {
 function fillAttendeesList(attendees: any[]) {
   const attendeeList = document.getElementById('attendee-list');
   attendeeList.innerHTML = '';
+
   const list = attendees.filter(item => (item.email as string).indexOf(searchText) > -1 || (item.connection_id as string).indexOf(searchText) > -1);
+
+  list.forEach(item => {
+    const attendee = document.createElement('div');
+    attendee.className='list-group-item d-flex justify-content-between align-items-center';
+
+    const details = document.createElement('p');
+    details.className = 'm-0';
+    details.innerText = item.email;
+
+    const id = document.createElement('p');
+    id.className = 'm-0 text-muted font-weight-light font-italic';
+    id.innerHTML = `<small>${item.connection_id}</small>`;
+
+    details.appendChild(id);
+    attendee.appendChild(details);
 }
+
+    attendeeList.appendChild(attendee);
+  });
+}
+
 function makeCall(id: string) {
 }
