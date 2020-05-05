@@ -156,4 +156,8 @@ function fillAttendeesList(attendees: any[]) {
 }
 
 function makeCall(id: string) {
+  getUserMedia({video: true, audio: true}, streamLocal => {
+  }, err => {
+    console.log('Failed to get local stream' ,err);
+  });
 }
