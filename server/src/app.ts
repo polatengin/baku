@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
   res.status(200).send('Baku is working 🥳');
 });
 const attendees: any[] = [];
+app.post('/register', (req, res) => {
+});
 const server = http.createServer(app);
 
 server.listen(port, () => {
