@@ -1,3 +1,4 @@
+const getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || (navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
 const registerButton = document.getElementById('register-button') as HTMLButtonElement;
 let searchText: string = '';
 
