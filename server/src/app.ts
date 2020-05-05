@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   res.status(200).send('Baku is working 🥳');
 });
+const attendees: any[] = [];
 const server = http.createServer(app);
 
 server.listen(port, () => {
