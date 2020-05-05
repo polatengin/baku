@@ -63,5 +63,8 @@ registerButton.addEventListener('click', () => {
     return;
   }
 
+  const emailInput = document.getElementById('email-input') as HTMLInputElement;
+
+  const email = emailInput.value;
 });
 
