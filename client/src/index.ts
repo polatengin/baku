@@ -34,6 +34,8 @@ connection.on('call', call => {
   answerButton.classList.remove('d-none');
 
   getUserMedia({video: true, audio: true}, streamLocal => {
+    answerButton.classList.add('d-none');
+
     videoMe.srcObject = streamLocal;
 });
   }, err => {
