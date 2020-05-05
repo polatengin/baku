@@ -140,6 +140,15 @@ function fillAttendeesList(attendees: any[]) {
 
     details.appendChild(id);
     attendee.appendChild(details);
+
+    if (item.connection_id !== connection.id) {
+      const button = document.createElement('button');
+      button.addEventListener('click', event => {
+        makeCall(item.connection_id);
+      });
+      button.className = 'badge badge-primary badge-pill btn btn-link start-video-call-button';
+      button.innerHTML = '<i class="fas fa-video"></i>';
+      attendee.appendChild(button);
 }
 
     attendeeList.appendChild(attendee);
