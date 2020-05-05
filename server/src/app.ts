@@ -10,7 +10,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.use(cors({origin: 'http://localhost:5000'}));
+app.use(cors({origin: ['http://localhost:5000', 'https://polatengin-baku-client.netlify.app']}));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
