@@ -6,6 +6,7 @@
   "homepage": "https://github.com/polatengin/baku",
   "scripts": {
     "build:dev": "webpack --mode development && postcss src/index.css > dist/bundle.css",
+    "build": "webpack --mode production && postcss src/index.css > dist/bundle.css",
     "start": "npm run build:dev && serve ./dist/"
   },
   "keywords": [],
