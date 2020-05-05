@@ -9,5 +9,6 @@
     "start": "npm run build:dev && serve ./dist/"
   },
   "keywords": [],
+  "author": "Engin Polat",
   "license": "MIT",
 }
