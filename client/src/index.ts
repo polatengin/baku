@@ -103,6 +103,20 @@ registerButton.addEventListener('click', () => {
         refreshProgress.style.width = '99%';
       });
     });
+
+    const refreshProgress = document.getElementById('refresh-progress') as HTMLDivElement;
+    setInterval(() => {
+      let current = parseInt(refreshProgress.style.width.replace('%', ''), 10) - 1;
+
+      if (current === 0) {
+        current = 99;
+
+        refreshButton.click();
+      }
+
+      refreshProgress.style.width = `${current}%`;
+    }, 1000);
+
 });
 });
 
