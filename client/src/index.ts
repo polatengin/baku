@@ -2,7 +2,7 @@ import Peer from 'peerjs';
 
 const API_SECURE: boolean = true;
 const API_HOST: string = 'polatengin-baku-server.netlify.app';
-const API_PORT: number = 80;
+const API_PORT: number = 8080;
 
 const getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || (navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
 
