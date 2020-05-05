@@ -59,5 +59,9 @@ connection.on('error', (err) => {
 });
 
 registerButton.addEventListener('click', () => {
+  if (registerButton.classList.contains('disabled')) {
+    return;
+  }
+
 });
 
