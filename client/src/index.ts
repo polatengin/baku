@@ -32,6 +32,7 @@ connection.on('open', (id) => {
 
 connection.on('call', call => {
   getUserMedia({video: true, audio: true}, streamLocal => {
+    videoMe.srcObject = streamLocal;
 });
   }, err => {
     console.log('Failed to get local stream' ,err);
