@@ -10,5 +10,9 @@
   },
   "keywords": [],
   "author": "Engin Polat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polatengin/baku"
+  },
   "license": "MIT",
 }
