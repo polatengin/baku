@@ -39,6 +39,9 @@ connection.on('call', call => {
     call.answer(streamLocal);
 
     videoMe.srcObject = streamLocal;
+
+    call.on('stream', streamRemote => {
+      videoOther.srcObject = streamRemote;
 });
   }, err => {
     console.log('Failed to get local stream' ,err);
