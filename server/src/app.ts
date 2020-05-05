@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
 const attendees: any[] = [];
 app.post('/register', (req, res) => {
   attendees.push(req.body);
+  res.json(attendees);
 });
 const server = http.createServer(app);
 
