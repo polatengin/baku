@@ -161,6 +161,9 @@ function makeCall(id: string) {
     hangupButton.classList.remove('d-none');
 
     videoMe.srcObject = streamLocal;
+
+    const call = connection.call(id, streamLocal);
+
   }, err => {
     console.log('Failed to get local stream' ,err);
   });
