@@ -18,4 +18,8 @@ connection.on('error', (err) => {
   const connectionAlertFail = document.getElementById('connection-alert-fail');
   connectionAlertFail.classList.remove('d-none');
 
+  const connectionAlertFailRedoButton = document.getElementById('connection-alert-fail-redo-button') as HTMLButtonElement;
+  connectionAlertFailRedoButton.addEventListener('click', () => {
+    location.reload();
+  });
 });
