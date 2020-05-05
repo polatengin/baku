@@ -42,7 +42,7 @@ connection.on('call', call => {
 
     call.on('stream', streamRemote => {
       videoOther.srcObject = streamRemote;
-});
+    });
   }, err => {
     console.log('Failed to get local stream' ,err);
   });
@@ -89,7 +89,7 @@ registerButton.addEventListener('click', () => {
     searchAttendeeInput.addEventListener('keyup', () => {
       searchText = searchAttendeeInput.value;
       fillAttendeesList(attendeeList);
-  });
+    });
 
     const refreshButton = document.getElementById('refresh-button') as HTMLButtonElement;
     refreshButton.addEventListener('click', () => {
@@ -117,7 +117,7 @@ registerButton.addEventListener('click', () => {
       refreshProgress.style.width = `${current}%`;
     }, 1000);
 
-});
+  });
 });
 
 function fillAttendeesList(attendees: any[]) {
@@ -149,7 +149,7 @@ function fillAttendeesList(attendees: any[]) {
       button.className = 'badge badge-primary badge-pill btn btn-link start-video-call-button';
       button.innerHTML = '<i class="fas fa-video"></i>';
       attendee.appendChild(button);
-}
+    }
 
     attendeeList.appendChild(attendee);
   });
@@ -164,6 +164,9 @@ function makeCall(id: string) {
 
     const call = connection.call(id, streamLocal);
 
+    call.on('stream', streamRemote => {
+      videoOther.srcObject = streamRemote;
+    });
   }, err => {
     console.log('Failed to get local stream' ,err);
   });
