@@ -17,6 +17,10 @@ app.post('/register', (req, res) => {
   attendees.push(req.body);
   res.json(attendees);
 });
+app.get('/list', (req, res) => {
+  res.json(attendees);
+});
+
 const server = http.createServer(app);
 
 server.listen(port, () => {
