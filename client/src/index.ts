@@ -1,3 +1,4 @@
+import Peer from 'peerjs';
 const API_SECURE: boolean = false;
 const API_HOST: string = 'localhost';
 const API_PORT: number = 3000;
