@@ -122,3 +122,5 @@ registerButton.addEventListener('click', () => {
 
 function fillAttendeesList(attendees: any[]) {
 }
+function makeCall(id: string) {
+}
