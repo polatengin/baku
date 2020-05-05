@@ -14,3 +14,8 @@ if (getUserMedia === null) {
 }
 
 const connection = new Peer({ secure: API_SECURE, host: API_HOST, port: API_PORT });
+connection.on('error', (err) => {
+  const connectionAlertFail = document.getElementById('connection-alert-fail');
+  connectionAlertFail.classList.remove('d-none');
+
+});
