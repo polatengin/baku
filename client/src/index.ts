@@ -85,6 +85,10 @@ registerButton.addEventListener('click', () => {
       fillAttendeesList(attendeeList);
     });
 
+    const searchAttendeeInput = document.getElementById('search-attendee-input') as HTMLInputElement;
+    searchAttendeeInput.addEventListener('keyup', () => {
+      searchText = searchAttendeeInput.value;
+      fillAttendeesList(attendeeList);
   });
 });
 });
