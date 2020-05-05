@@ -20,6 +20,15 @@ if (getUserMedia === null) {
 }
 
 const connection = new Peer({ secure: API_SECURE, host: API_HOST, port: API_PORT });
+connection.on('open', (id) => {
+  const connectionAlertSuccess = document.getElementById('connection-alert-success');
+  const connectionAlertSuccessIdLabel = document.getElementById('connection-alert-success-id-label');
+
+  connectionAlertSuccessIdLabel.innerText = id;
+
+  connectionAlertSuccess.classList.remove('d-none');
+  registerButton.classList.remove('disabled');
+});
 connection.on('error', (err) => {
   const connectionAlertFail = document.getElementById('connection-alert-fail');
   connectionAlertFail.classList.remove('d-none');
