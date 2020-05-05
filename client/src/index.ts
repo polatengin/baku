@@ -90,6 +90,19 @@ registerButton.addEventListener('click', () => {
       searchText = searchAttendeeInput.value;
       fillAttendeesList(attendeeList);
   });
+
+    const refreshButton = document.getElementById('refresh-button') as HTMLButtonElement;
+    refreshButton.addEventListener('click', () => {
+      fetch(
+        `${API_SECURE ? 'https' : 'http'}://${API_HOST}:${API_PORT}/list`, { method: 'GET', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' } }
+      ).then(response => {
+        response.json().then(_ => {
+          fillAttendeesList(_);
+        });
+
+        refreshProgress.style.width = '99%';
+      });
+    });
 });
 });
 
