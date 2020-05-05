@@ -3,6 +3,14 @@
   height: 480px;
   position: relative;
 }
+#video-other {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: block;
+  width: 640px;
+  height: 480px;
+}
 #video-me {
   position: absolute;
   bottom: 0px;
