@@ -66,5 +66,12 @@ registerButton.addEventListener('click', () => {
   const emailInput = document.getElementById('email-input') as HTMLInputElement;
 
   const email = emailInput.value;
+  fetch(
+    `${API_SECURE ? 'https' : 'http'}://${API_HOST}:${API_PORT}/register`,
+    { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 'email': email, 'connection_id': connection.id }) }
+  ).then(response => {
+  });
+});
 });
 
