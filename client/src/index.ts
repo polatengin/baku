@@ -132,6 +132,22 @@ registerButton.addEventListener('click', () => {
   });
 });
 
+hangupButton.addEventListener('click', () => {
+  call.close();
+
+  hangupButton.classList.add('d-none');
+
+  videoMe.srcObject = undefined;
+  videoOther.srcObject = undefined;
+
+  streamLocal.getTracks().forEach((track) => {
+    track.stop();
+  });
+  streamRemote.getTracks().forEach((track) => {
+    track.stop();
+  });
+});
+
 function fillAttendeesList(attendees: any[]) {
   const attendeeList = document.getElementById('attendee-list');
   attendeeList.innerHTML = '';
