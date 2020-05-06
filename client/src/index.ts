@@ -8,6 +8,7 @@ const getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || n
 
 const registerButton = document.getElementById('register-button') as HTMLButtonElement;
 const answerButton = document.getElementById('answer-button') as HTMLButtonElement;
+const hangupButton = document.getElementById('hangup-button') as HTMLButtonElement;
 const videoMe = document.getElementById('video-me') as HTMLVideoElement;
 const videoOther = document.getElementById('video-other') as HTMLVideoElement;
 
