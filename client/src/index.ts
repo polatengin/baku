@@ -184,15 +184,18 @@ function fillAttendeesList(attendees: any[]) {
 }
 
 function makeCall(id: string) {
-  getUserMedia({video: true, audio: true}, streamLocal => {
-    const hangupButton = document.getElementById('hangup-button') as HTMLButtonElement;
+  getUserMedia({video: true, audio: true}, local => {
     hangupButton.classList.remove('d-none');
+
+    streamLocal = local;
 
     videoMe.srcObject = streamLocal;
 
-    const call = connection.call(id, streamLocal);
+    call = connection.call(id, streamLocal);
 
-    call.on('stream', streamRemote => {
+    call.on('stream', remote => {
+      streamRemote = remote;
+
       videoOther.srcObject = streamRemote;
     });
   }, err => {
