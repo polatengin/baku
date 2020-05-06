@@ -35,17 +35,24 @@ connection.on('open', (id) => {
   registerButton.classList.remove('disabled');
 });
 
-connection.on('call', call => {
+connection.on('call', _ => {
   answerButton.classList.remove('d-none');
+  hangupButton.classList.remove('d-none');
 
-  getUserMedia({video: true, audio: true}, streamLocal => {
+  call = _;
+
+  getUserMedia({video: true, audio: true}, local => {
     answerButton.classList.add('d-none');
+
+    streamLocal = local;
 
     call.answer(streamLocal);
 
     videoMe.srcObject = streamLocal;
 
-    call.on('stream', streamRemote => {
+    call.on('stream', remote => {
+      streamRemote = remote;
+
       videoOther.srcObject = streamRemote;
     });
   }, err => {
