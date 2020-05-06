@@ -13,6 +13,9 @@ const videoMe = document.getElementById('video-me') as HTMLVideoElement;
 const videoOther = document.getElementById('video-other') as HTMLVideoElement;
 
 let call: Peer.MediaConnection;
+let streamLocal: MediaStream;
+let streamRemote: MediaStream;
+
 let searchText: string = '';
 
 if (getUserMedia === null) {
