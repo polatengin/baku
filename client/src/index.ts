@@ -12,6 +12,7 @@ const hangupButton = document.getElementById('hangup-button') as HTMLButtonEleme
 const videoMe = document.getElementById('video-me') as HTMLVideoElement;
 const videoOther = document.getElementById('video-other') as HTMLVideoElement;
 
+let call: Peer.MediaConnection;
 let searchText: string = '';
 
 if (getUserMedia === null) {
