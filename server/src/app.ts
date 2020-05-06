@@ -8,9 +8,9 @@ const cors = require('cors');
 
 const app = express();
 
-const port = 8080;
+const port = 3000;
 
-app.use(cors({ origin: 'https://polatengin-baku-client.netlify.app' }));
+app.use(cors({ origin: 'http://localhost:5000' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
