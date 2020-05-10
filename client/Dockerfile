@@ -20,6 +20,8 @@ COPY --from=builder /code/dist /usr/share/nginx/html
 
 RUN nginx
 
+EXPOSE 80
+
 LABEL maintainer="Engin Polat (polatengin) <engin@enginpolat.com>" \
       org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.license="MIT" \
