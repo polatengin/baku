@@ -5,3 +5,5 @@ WORKDIR /code
 ENV PATH /code/node_modules/.bin:$PATH
 
 COPY . .
+
+RUN npm install
