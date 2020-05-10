@@ -17,3 +17,5 @@ FROM nginx:1.17.0-alpine as production
 USER root
 
 COPY --from=builder /code/dist /usr/share/nginx/html
+
+RUN nginx
