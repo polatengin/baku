@@ -15,3 +15,5 @@ RUN npx postcss src/index.css > dist/bundle.css
 FROM nginx:1.17.0-alpine as production
 
 USER root
+
+COPY --from=builder /code/dist /usr/share/nginx/html
