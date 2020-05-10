@@ -13,3 +13,5 @@ RUN npx webpack --mode production
 RUN npx postcss src/index.css > dist/bundle.css
 
 FROM nginx:1.17.0-alpine as production
+
+USER root
