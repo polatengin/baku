@@ -19,3 +19,10 @@ USER root
 COPY --from=builder /code/dist /usr/share/nginx/html
 
 RUN nginx
+
+LABEL maintainer="Engin Polat (polatengin) <engin@enginpolat.com>" \
+      org.label-schema.docker.dockerfile="/Dockerfile" \
+      org.label-schema.license="MIT" \
+      org.label-schema.name="Peer-to-Peer WebRTC Example" \
+      org.label-schema.vcs-type="Git" \
+      org.label-schema.vcs-url="https://github.com/polatengin/baku"
