@@ -5,3 +5,5 @@ WORKDIR /code
 COPY . .
 
 RUN npm install
+
+EXPOSE 3000
