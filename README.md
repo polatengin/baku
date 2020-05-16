@@ -31,3 +31,7 @@ It supports video, voice, and generic data to be sent between peers, allowing de
 The technology is available on all modern browsers as well as on native clients for all major platforms.
 
 The technologies behind WebRTC are implemented as an open web standard and available as regular JavaScript APIs in all major browsers.
+
+## References
+
+* [WebRTC](https://webrtc.org/)
