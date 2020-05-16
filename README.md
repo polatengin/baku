@@ -12,3 +12,13 @@ The reason I made this project;
 
 * Gain the habit of project development within Visual Studio Code DevContainer
 
+Technologies I used in this project are;
+
+* Typescript
+* WebPack
+* PostCSS
+* GitHub Actions
+* Docker
+* Netlify
+* DevContainers
+
